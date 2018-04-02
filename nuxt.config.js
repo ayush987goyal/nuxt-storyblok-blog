@@ -56,6 +56,10 @@ module.exports = {
     ]
   ],
 
+  router: {
+    base: process.env.NODE_ENV === 'production' ? '/nuxt-storyblok-blog/' : '/'
+  },
+
   /*
   ** Axios module configuration
   */
@@ -82,6 +86,7 @@ module.exports = {
       }
     }
   },
+
   generate: {
     dir: 'docs',
     routes: function() {
